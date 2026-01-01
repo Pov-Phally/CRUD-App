@@ -14,15 +14,6 @@ class ApiService {
     throw Exception('Failed to load products');
   }
 
-  // static Future<List<Product>> fetchProducts() async {
-  //   final res = await http.get(Uri.parse('$BASE_URL/products'));
-  //   if (res.statusCode == 200) {
-  //     final List data = jsonDecode(res.body);
-  //     return data.map((e) => Product.fromJson(e)).toList();
-  //   }
-  //   throw Exception('Failed to load products');
-  // }
-
   static Future<Product> getProduct(id) async {
     final res = await http.get(Uri.parse('$BASE_URL/products/$id'));
     if (res.statusCode == 200) return Product.fromJson(jsonDecode(res.body));

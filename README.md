@@ -22,7 +22,7 @@ This API is designed to work with a Flutter frontend application.
 
 - **Node.js**
 - **Express.js**
-- **Database** (MongoDB / MySQL / MsSQL )
+- **Database** (MongoDB / MySQL / MSSQL )
 - **REST API**
 
 ---
@@ -73,7 +73,7 @@ GET /products?page=1&limit=10
 [
   {
     "id": 1,
-    "name": "Product name",
+    "productName": "Product name",
     "price": 100
     "stock": 1
   }
@@ -93,7 +93,7 @@ GET /products/:id
 ```json
 {
   "id": 1,
-  "name": "Product name",
+  "productName": "Product name",
   "price": 100,
   "stock": 1
 }
@@ -111,7 +111,7 @@ POST /products
 
 ```json
 {
-  "name": "New Product",
+  "productName": "New Product",
   "price": 150,
   "stock": 1
 }
@@ -123,7 +123,7 @@ POST /products
 {
   "result": {
     "id": 2,
-    "name": "New Product",
+    "productName": "New Product",
     "price": 150,
     "stock": 1
   }
@@ -142,7 +142,7 @@ PUT /products/:id
 
 ```json
 {
-  "name": "Updated Product",
+  "productName": "Updated Product",
   "price": 200,
   "stock": 1
 }
@@ -154,7 +154,7 @@ PUT /products/:id
 {
   "result": {
     "id": 1,
-    "name": "Updated Product",
+    "productName": "Updated Product",
     "price": 200,
     "stock": 1
   }
@@ -184,7 +184,6 @@ DELETE /products/:id
 ### Prerequisites
 
 * Node.js installed
-* npm or yarn installed
 
 ---
 

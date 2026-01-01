@@ -50,22 +50,6 @@ class ProductProvider extends ChangeNotifier {
 
   }
 
-
-
-  // fetchProducts
-  // Future<void> fetchProducts() async {
-  //   loading = true; error = null; notifyListeners();
-  //   try {
-  //     _items = await ApiService.fetchProducts();
-  //     _applyFilters();
-  //   } catch (e) {
-  //     error = e.toString();
-  //   } finally {
-  //     loading = false; notifyListeners();
-  //   }
-  // }
-
-
 // applyFilters
   void _applyFilters() {
     _filtered = _items.where((product) => product.name.toLowerCase().contains(_query.toLowerCase())).toList();

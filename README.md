@@ -1,80 +1,80 @@
-# CRUD Backend API
+---
 
-A RESTful backend API that supports **Create, Read, Update, and Delete (CRUD)** operations for products.  
-This API is designed to work with a Flutter frontend application.
+# 📦 CRUD Backend API
+
+A **RESTful backend API** built with **Node.js** and **Express.js** to support Create, Read, Update, and Delete (CRUD) operations for managing products. This backend is designed to work with a frontend app (such as Flutter). ([GitHub][1])
 
 ---
 
 ## 🚀 Features
 
-- 📦 Get all products (with pagination)
-- 🔍 Get a single product by ID
-- ➕ Create a new product
-- ✏️ Update an existing product
-- 🗑️ Delete a product
-- 🌐 JSON-based REST API
+✔️ Get all products (with pagination)
+✔️ Get a product by ID
+✔️ Create a new product
+✔️ Update an existing product
+✔️ Delete a product
+✔️ JSON-based REST API responses
 
 ---
 
 ## 🛠️ Tech Stack
 
-> Adjust this section if your stack is different.
+This project uses:
 
-- **Node.js**
-- **Express.js**
-- **Database** MySQL
-- **REST API**
+* **Node.js**
+* **Express.js**
+* **MySQL** 
+* **REST API architecture** ([GitHub][1])
 
 ---
 
-## 📁 Project Structure (Example)
+## 📁 Project Structure
 
-```
-
+````
 backend/
 ├── controllers/
 ├── routes/
-├── models/
-├── server.js
-└── package.json
-
-```
+├── validators/
+├── .env
+├── db.js
+├── index.js
+├── package.json
+└── README.md
+``` 
 
 ---
 
-## ⚙️ API Base URL
+## 📍 API Base URL
 
-```
+````
 
 [http://localhost:3000](http://localhost:3000)
 
 ```
 
-> When used with an Android emulator, the Flutter app accesses this API via:
-```
-
-[http://10.0.2.2:3000](http://10.0.2.2:3000)
-
-```
+> When used with Android emulators (like Flutter), access via:  
+> `http://10.0.2.2:3000`
 
 ---
 
 ## 📌 API Endpoints
 
-### Get All Products (Paginated)
+### 🔹 Get All Products (Paginated)
+
 ```
 
-GET /products?page=1&limit=10
+GET /products?page=<number>&limit=<number>
 
 ````
 
-**Response**
+**Response:**
+
 ```json
 [
   {
     "id": 1,
     "productName": "Product name",
-    "price": 100
+    "price": 100,
     "stock": 1
   }
 ]
@@ -82,13 +82,13 @@ GET /products?page=1&limit=10
 
 ---
 
-### Get Product by ID
+### 🔹 Get Single Product
 
 ```
 GET /products/:id
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
@@ -101,13 +101,13 @@ GET /products/:id
 
 ---
 
-### Create Product
+### 🔹 Create Product
 
 ```
 POST /products
 ```
 
-**Request Body**
+**Request Body:**
 
 ```json
 {
@@ -117,7 +117,7 @@ POST /products
 }
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
@@ -132,13 +132,13 @@ POST /products
 
 ---
 
-### Update Product
+### 🔹 Update Product
 
 ```
 PUT /products/:id
 ```
 
-**Request Body**
+**Request Body:**
 
 ```json
 {
@@ -148,28 +148,15 @@ PUT /products/:id
 }
 ```
 
-**Response**
-
-```json
-{
-  "result": {
-    "id": 1,
-    "productName": "Updated Product",
-    "price": 200,
-    "stock": 1
-  }
-}
-```
-
 ---
 
-### Delete Product
+### 🔹 Delete Product
 
 ```
 DELETE /products/:id
 ```
 
-**Response**
+**Response:**
 
 ```json
 {
@@ -179,74 +166,65 @@ DELETE /products/:id
 
 ---
 
-## ▶️ Getting Started
+## 🛠️ Getting Started (Setup)
 
-### Prerequisites
+### 🔹 Prerequisites
 
-* Node.js installed
+* **Node.js** installed on your system
+* (Optional) **MySQL** installed and running locally or remotely
 
----
+### 🔹 Installation
 
-### Installation
+1. Clone the repository:
 
-1. Clone the repository
+   ```bash
+   git clone https://github.com/Pov-Phally/CRUD-App.git
+   ```
 
-```bash
-git clone <your-backend-repo-url>
-```
+2. Navigate to the backend directory:
 
-2. Navigate to the backend folder
+   ```bash
+   cd CRUD-App/backend
+   ```
 
-```bash
-cd backend
-```
+3. Install dependencies:
 
-3. Install dependencies
+   ```bash
+   npm install
+   ```
 
-```bash
-npm install
-```
+4. Create a `.env` file with your database configuration:
 
-4. Start the server
+   ```
+   DB_HOST=<your_host>
+   DB_USER=<your_username>
+   DB_PASSWORD=<your_password>
+   DB_NAME=<your_database_name>
+   PORT=3000
+   ```
 
-```bash
-npm start
-```
+5. Start the server:
 
-The server will run at:
+   ```bash
+   npm start
+   ```
 
-```
+Server will run at:
+
+````
 http://localhost:3000
-```
-
 ---
 
 ## 🧪 Testing the API
 
-You can test endpoints using:
-
-* Postman
-* Insomnia
-* curl
+Use tools like **Postman**, **Insomnia**, or **curl** to test the endpoints:
 
 Example:
 
 ```bash
 curl http://localhost:3000/products
-```
+````
 
 ---
 
-## 🔗 Frontend Integration
-
-This backend is designed to work with the Flutter frontend:
-
-* Base URL in Flutter:
-
-```dart
-const String BASE_URL = 'http://10.0.2.2:3000';
-```
-
-* Ensure the backend is running **before** launching the Flutter app.
-
----
+[1]: https://github.com/Pov-Phally/CRUD-App/tree/backend "GitHub - Pov-Phally/CRUD-App at backend"

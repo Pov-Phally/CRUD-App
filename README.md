@@ -75,6 +75,7 @@ GET /products?page=1&limit=10
     "id": 1,
     "name": "Product name",
     "price": 100
+    "stock": 1
   }
 ]
 ````
@@ -93,7 +94,8 @@ GET /products/:id
 {
   "id": 1,
   "name": "Product name",
-  "price": 100
+  "price": 100,
+  "stock": 1
 }
 ```
 
@@ -110,7 +112,8 @@ POST /products
 ```json
 {
   "name": "New Product",
-  "price": 150
+  "price": 150,
+  "stock": 1
 }
 ```
 
@@ -121,7 +124,8 @@ POST /products
   "result": {
     "id": 2,
     "name": "New Product",
-    "price": 150
+    "price": 150,
+    "stock": 1
   }
 }
 ```
@@ -139,7 +143,8 @@ PUT /products/:id
 ```json
 {
   "name": "Updated Product",
-  "price": 200
+  "price": 200,
+  "stock": 1
 }
 ```
 
@@ -150,7 +155,8 @@ PUT /products/:id
   "result": {
     "id": 1,
     "name": "Updated Product",
-    "price": 200
+    "price": 200,
+    "stock": 1
   }
 }
 ```
@@ -245,5 +251,3 @@ const String BASE_URL = 'http://10.0.2.2:3000';
 * Ensure the backend is running **before** launching the Flutter app.
 
 ---
-Just tell me 👌
-```

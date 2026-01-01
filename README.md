@@ -22,7 +22,7 @@ This API is designed to work with a Flutter frontend application.
 
 - **Node.js**
 - **Express.js**
-- **Database** (MongoDB / MySQL / MSSQL )
+- **Database** MySQL
 - **REST API**
 
 ---

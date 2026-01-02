@@ -23,7 +23,7 @@ This project uses:
 
 * **Node.js**
 * **Express.js**
-* **MySQL** 
+* **SQL Server** 
 * **REST API architecture** ([GitHub][1])
 
 ---
